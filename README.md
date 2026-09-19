@@ -1,2 +1,14 @@
-# careergap-ai
-An agentic career advisor that reads a student's resume/profile, matches them against curated job postings, pinpoints exactly which skills they're missing for each job, and builds a time- and cost-aware training roadmap to close the gap — with every step explainable
+# CareerGap AI
+
+Skill-Gap-to-Job Matching Agent (Capabl Agentic AI Hackathon, Track C · C4).
+
+Agent pipeline: Profile Agent → Job Match Agent → Gap Analysis Agent → Training Agent → Report Agent.
+
+## Run locally
+```
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+## Deploy
+Push this folder to GitHub and deploy on Streamlit Community Cloud (share.streamlit.io) or Hugging Face Spaces for a free public link.
