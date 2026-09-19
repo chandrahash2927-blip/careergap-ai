@@ -1,4 +1,3 @@
-
 import re
 import pandas as pd
 import streamlit as st
@@ -260,7 +259,8 @@ if go:
         cm1.metric(f"Readiness for {top['title']}", f"{gap['readiness']}%")
         cm2.progress(int(gap["readiness"])/100)
         st.write(f"**✅ Matched:** {', '.join(gap['matched']) or 'none'}")
-        st.error(f"**🔴 Critical gaps (required):** {', '.join(gap['critical']) or 'none — you're fully qualified!'}")
+        no_gaps_msg = "none — you are fully qualified for this role!"
+        st.error("**🔴 Critical gaps (required):** " + (", ".join(gap["critical"]) or no_gaps_msg))
         st.warning(f"**🟡 Important gaps (preferred):** {', '.join(gap['important']) or 'none'}")
 
     with tab3:
